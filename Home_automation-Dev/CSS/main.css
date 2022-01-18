@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul.main {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-color: green;
+	overflow: hidden;
+	position: static;
+}
+
+li.main{
+	float: left;
+	border-right: 1px solid black;
+}
+
+li.main a{
+	display: block;
+	color: ivory;
+	font-size: 25px;
+	text-align: center;
+	font-weight: bold;
+	padding: 10px 180px 10px 180px;
+	text-decoration: none;
+}
+
+li.main a:hover{
+	background-color: black;
+}
+
+body.main{
+	background-color: floralwhite;
+}
+
+p.main{
+	margin: 20px 40px 0px 40px;
+	font-size: 20px;
+}
+
+div.light{
+	float: left;
+	background-color: antiquewhite;
+	width: 250px;
+	border: 10px solid green;
+	border-radius: 60px;
+	padding: 10px 50px 50px;
+	margin: 40px 0 0 180px;
+}
+
+#lightctrlheading{
+	text-decoration: underline;
+	font-size: 25px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#lightset{
+	background-color: limegreen;
+	color: black;
+	padding: 10px 30px;
+	margin: 10px 50px 0 80px;
+	cursor: pointer;
+}
+
+div.temperature{
+	float: left;
+	background-color: antiquewhite;
+	width: 250px;
+	border: 10px solid green;
+	border-radius: 60px;
+	padding: 10px 50px 50px;
+	margin: 40px 0px 0px 350px;
+}
+
+#tempctrlheading{
+	text-decoration: underline;
+	font-size: 25px;
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
+
+#tempset{
+	background-color: limegreen;
+	color: black;
+	padding: 10px 30px;
+	margin: 10px 50px 0 80px;
+	cursor: pointer;
+}
+
+#temperature{
+	font-size: 20px;
+	margin: 0 90px;
+}
+
+#light{
+        font-size: 20px;
+        margin: 0 90px;
+}
+
+

@@ -1,0 +1,48 @@
+<html>
+<head>
+	<link rel="stylesheet" href="../CSS/main.css">
+</head>
+
+<script>
+setInterval( function realtimeupdate(){
+
+	var httpinstance = new XMLHttpRequest();
+	httpinstance.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status == 200){
+			document.getElementById("temperature").innerHTML = this.responseText;
+		}
+	};
+	httpinstance.open("GET", "./Real_Time_Data/realtimephp.php?c=1", true);
+	httpinstance.send();
+
+	var httpinstance = new XMLHttpRequest();
+        httpinstance.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+			document.getElementById("light").innerHTML = this.responseText;
+//                        if(strcmp(this.responseText, 1) == 0) document.getElementById("light").innerHTML = "ON";
+//			else document.getElementById("light").innerHTML = "OFF";
+                }
+        };
+        httpinstance.open("GET", "realtimephp.php?c=2", true);
+        httpinstance.send();
+
+}, 1000);
+
+</script>
+
+<body class="main" onload = realtimeupdate()>
+	<ul class="main">
+		<li class="main"><a href="../Home_Page/main.php">Main</a></li>
+		<li class="main"><a href="../Remote_Controls/controls.php">Controls</a></li>
+		<li class="main"><a href="../DataLogDisplay/data_log_display.php">Display Data</a></li>
+	</ul>
+
+	<div class="light">
+                <p id="lightctrlheading">Light Status</p><p id="light"></p>
+	</div>
+
+        <div class="temperature">
+                <p id="tempctrlheading">Current Temperature:</p><p id="temperature"></p>
+        </div>
+</body>
+</html>
